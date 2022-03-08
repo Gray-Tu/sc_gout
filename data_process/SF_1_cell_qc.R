@@ -73,7 +73,7 @@ VlnPlot(get_count_feature_mt(syn183), features = c("nFeature_RNA", "nCount_RNA",
 samplelist <- lapply(samplelist, function(x) subset(x, predicted_doublets==FALSE))
 #2 minic Read10X return
 samplelist <- lapply(samplelist, function(x) get_count_feature_mt(x))
-#3 subset under 500-4500 genes/ 7.5 mt% / 30000 reads and NormalizeData for cell cycle score
+#3 subset under 500-4500 genes/ 15 mt% / 30000 reads and NormalizeData for cell cycle score
 samplelist <- lapply(samplelist, function(x) subset_normal_VST(x))
 
 #4 Cell cycle score
