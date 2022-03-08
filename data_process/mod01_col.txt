@@ -1,0 +1,35 @@
+cell	cols	mod1cols
+Naive B cells	#782AB6	#FE00FA
+Non-switched memory B cells	#AAF400	#F4A261
+Switched memory B cells	#BDCDFF	#E9C46A
+Plasmablasts	#822E1C	#2A9D8F
+Exhausted B cells	#B5EFB5	#2364AA
+Naive CD4 T cells	#5A5156	#5A5156
+Follicular helper T cells	#E4E1E3	#E4E1E3
+T regulatory cells	#F6222E	#F6222E
+Terminal effector CD4 T cells	#FE00FA	#E88D75
+Th1 cells	#16FF32	#16FF32
+Th1/Th17 cells	#3283FE	#3283FE
+Th17 cells	#FEAF16	#FEAF16
+Th2 cells	#B00068	#B00068
+Naive CD8 T cells	#1CFFCE	#1CFFCE
+Central memory CD8 T cells	#90AD1C	#90AD1C
+Effector memory CD8 T cells	#2ED9FF	#2ED9FF
+MAIT cells	#DEA0FD	#DEA0FD
+Terminal effector CD8 T cells	#AA0DFE	#AA0DFE
+Non-Vd2 gd T cells	#F8A19F	#F8A19F
+Vd2 gd T cells	#325A9B	#325A9B
+Natural killer cells	#C4451C	#A4F4F2
+Classical monocytes	#1C8356	#F2DDA4
+Intermediate monocytes	#85660D	#85660D
+Non classical monocytes	#B10DA1	#B10DA1
+Macrophages	#FBE426	#FBE426
+Macrophages M1	#1CBE4F	#1CBE4F
+INF-Macro	#FA0087	#E7EFC5
+lung Macro	#FC1CBF	#FC1CBF
+Myeloid dendritic cells	#F7E1A0	#1C8356
+Plasmacytoid dendritic cells	#C075A6	#C075A6
+Low-density basophils	#7ED7D1	#7ED7D1
+Low-density neutrophils	#1C7F93	#9CEC5B
+Megakaryoctes	#D85FF7	#D85FF7
+Progenitor cells	#683B79	#683B79
