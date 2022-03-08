@@ -29,7 +29,7 @@ we remain cells follow:
 
 PBMC: (pc30m2h5_cell.qc.R, Gout_10x_detect_doublets.ipynb, and N01F_N05S_10x_detect_doublets.ipynb)
 
-SF: 
+SF: SF_1_cell_qc.R
 
 1. nFeature_RNA > 500
 2. nFeature_RNA < 4500
