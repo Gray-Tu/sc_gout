@@ -533,8 +533,8 @@ ADV_fig02 <- plot_grid(
   ncol=4, 
   align = 'vh',
   axis = "lr",
-  labels = c("A", "B", "C", "D", "E",
-             "F", "G", "H", "I", "J", "K"),
+  labels = c("a", "b", "c", "d", "e",
+             "f", "g", "h", "i", "j", "k"),
              #"K", "L", "M", "N", "O", "P", "Q"),
   hjust = -1
 ) +  theme(plot.background = element_rect(fill = "white", colour = "white"))
@@ -542,3 +542,6 @@ ADV_fig02 <- plot_grid(
 ADV_fig02
 ggsave("ADValt_Fig02.pdf",  width = 12, height = 10)
 ggsave("ADValt_Fig02.png",  width = 12, height = 10)
+ggsave("ADValt_Fig02.jpg",  width = 12, height = 10, dpi=600)
+
+

@@ -270,21 +270,22 @@ legend_p <- plot_grid(cls_le, group_le, ncol=1)
 l1 <- plot_grid(INF_dim, INF_main_p+NoLegend()+scale_x_discrete(guide = guide_axis(n.dodge=2)), 
                 ENG_dim, ENG_main_p+NoLegend()+scale_x_discrete(guide = guide_axis(n.dodge=2)),
                 group_le, rel_widths = c(1.2,0.8,1.2,0.8,0.6),
-                align = "h", axis="bt", ncol=5, labels=c("A", "B", "C", "D"))
+                align = "h", axis="bt", ncol=5, labels=c("a", "b", "c", "d"))
 
 b2 <- plot_grid(INF_cls_p+NoLegend(), 
                 INF_clsgroup_p+NoLegend(), 
                 ncol=1, align = "hv", axis="btlr",
-                labels=c("E", "G"))
+                labels=c("e", "g"))
 
 b3 <- plot_grid(ENG_cls_p+NoLegend(), ENG_clsgroup_p+NoLegend(), 
                 ncol=1, align = "hv", axis="btlr",
-                labels=c("F", "H"))
+                labels=c("f", "h"))
 
 l23 <- plot_grid(b2, b3, legend_p, ncol=3, rel_widths = c(1,1,0.3))
 plot_grid(l1, l23, ncol=1, rel_heights = c(1,2))
 ggsave("ADV_Fig05_INF_ENG_InterMono.png", width = 12, height = 8)
 ggsave("ADV_Fig05_INF_ENG_InterMono.pdf", width = 12, height = 8)
+ggsave("ADV_Fig05_INF_ENG_InterMono.jpg", width = 12, height = 8, dpi=600)
 get_test_table(DF, "InterMono")
 
 
@@ -350,17 +351,17 @@ legend_p <- plot_grid(cls_le, group_le, ncol=1)
 l1 <- plot_grid(INF_dim, INF_main_p+NoLegend()+scale_x_discrete(guide = guide_axis(n.dodge=2)), 
                 ENG_dim, ENG_main_p+NoLegend()+scale_x_discrete(guide = guide_axis(n.dodge=2)),
                 group_le, rel_widths = c(1.2,0.8,1.2,0.8,0.6),
-                align = "h", axis="bt", ncol=5, labels=c("A", "B", "C", "D"))+
+                align = "h", axis="bt", ncol=5, labels=c("a", "b", "c", "d"))+
   theme(plot.background = element_rect(fill = "white", colour = "white"))
 
 b2 <- plot_grid(INF_cls_p+NoLegend(), 
                 INF_clsgroup_p+NoLegend(), 
                 ncol=1, align = "hv", axis="btlr",
-                labels=c("E", "G"))
+                labels=c("e", "g"))
 
 b3 <- plot_grid(ENG_cls_p+NoLegend(), ENG_clsgroup_p+NoLegend(), 
                 ncol=1, align = "hv", axis="btlr",
-                labels=c("F", "H"))
+                labels=c("f", "h"))
 
 l23 <- plot_grid(b2, b3, legend_p, ncol=3, rel_widths = c(1,1,0.3))+
   theme(plot.background = element_rect(fill = "white", colour = "white"))
@@ -431,17 +432,17 @@ legend_p <- plot_grid(cls_le, group_le, ncol=1)
 l1 <- plot_grid(INF_dim, INF_main_p+NoLegend()+scale_x_discrete(guide = guide_axis(n.dodge=2)), 
                 ENG_dim, ENG_main_p+NoLegend()+scale_x_discrete(guide = guide_axis(n.dodge=2)),
                 group_le, rel_widths = c(1.2,0.8,1.2,0.8,0.6),
-                align = "h", axis="bt", ncol=5, labels=c("A", "B", "C", "D"))+
+                align = "h", axis="bt", ncol=5, labels=c("a", "b", "c", "d"))+
   theme(plot.background = element_rect(fill = "white", colour = "white"))
 
 b2 <- plot_grid(INF_cls_p+NoLegend(), 
                 INF_clsgroup_p+NoLegend(), 
                 ncol=1, align = "hv", axis="btlr",
-                labels=c("E", "G"))
+                labels=c("e", "g"))
 
 b3 <- plot_grid(ENG_cls_p+NoLegend(), ENG_clsgroup_p+NoLegend(), 
                 ncol=1, align = "hv", axis="btlr",
-                labels=c("F", "H"))
+                labels=c("f", "h"))
 
 l23 <- plot_grid(b2, b3, legend_p, ncol=3, rel_widths = c(1,1,0.3))+
   theme(plot.background = element_rect(fill = "white", colour = "white"))
@@ -514,17 +515,17 @@ legend_p <- plot_grid(cls_le, group_le, ncol=1)
 l1 <- plot_grid(INF_dim, INF_main_p+NoLegend()+scale_x_discrete(guide = guide_axis(n.dodge=2)), 
                 ENG_dim, ENG_main_p+NoLegend()+scale_x_discrete(guide = guide_axis(n.dodge=2)),
                 group_le, rel_widths = c(1.2,0.8,1.2,0.8,0.6),
-                align = "h", axis="bt", ncol=5, labels=c("A", "B", "C", "D"))+
+                align = "h", axis="bt", ncol=5, labels=c("a", "b", "c", "d"))+
   theme(plot.background = element_rect(fill = "white", colour = "white"))
 
 b2 <- plot_grid(INF_cls_p+NoLegend(), 
                 INF_clsgroup_p+NoLegend(), 
                 ncol=1, align = "hv", axis="btlr",
-                labels=c("E", "G"))
+                labels=c("e", "g"))
 
 b3 <- plot_grid(ENG_cls_p+NoLegend(), ENG_clsgroup_p+NoLegend(), 
                 ncol=1, align = "hv", axis="btlr",
-                labels=c("F", "H"))
+                labels=c("f", "h"))
 
 l23 <- plot_grid(b2, b3, legend_p, ncol=3, rel_widths = c(1,1,0.3))+
   theme(plot.background = element_rect(fill = "white", colour = "white"))
@@ -595,17 +596,17 @@ legend_p <- plot_grid(cls_le, group_le, ncol=1)
 l1 <- plot_grid(INF_dim, INF_main_p+NoLegend()+scale_x_discrete(guide = guide_axis(n.dodge=2)), 
                 ENG_dim, ENG_main_p+NoLegend()+scale_x_discrete(guide = guide_axis(n.dodge=2)),
                 group_le, rel_widths = c(1.2,0.8,1.2,0.8,0.6),
-                align = "h", axis="bt", ncol=5, labels=c("A", "B", "C", "D"))+
+                align = "h", axis="bt", ncol=5, labels=c("a", "b", "c", "d"))+
   theme(plot.background = element_rect(fill = "white", colour = "white"))
 
 b2 <- plot_grid(INF_cls_p+NoLegend(), 
                 INF_clsgroup_p+NoLegend(), 
                 ncol=1, align = "hv", axis="btlr",
-                labels=c("E", "G"))
+                labels=c("e", "g"))
 
 b3 <- plot_grid(ENG_cls_p+NoLegend(), ENG_clsgroup_p+NoLegend(), 
                 ncol=1, align = "hv", axis="btlr",
-                labels=c("F", "H"))
+                labels=c("f", "h"))
 
 l23 <- plot_grid(b2, b3, legend_p, ncol=3, rel_widths = c(1,1,0.3))+
   theme(plot.background = element_rect(fill = "white", colour = "white"))

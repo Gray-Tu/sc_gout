@@ -432,7 +432,7 @@ make_advFig03 <- function(cell, DEG_df, seurat_obj, DF, boxplot_p){
     b,
     c,
     ncol=3, 
-    labels=c("A", "B", "C"),
+    labels=c("a", "b", "c"),
     rel_widths = c(1, 0.8, 1.2)
   )+theme(plot.background = element_rect(fill = "white", colour = "white"))
   
@@ -440,7 +440,7 @@ make_advFig03 <- function(cell, DEG_df, seurat_obj, DF, boxplot_p){
     pabc,
     d,
     ncol=1,
-    labels=c("", "D"),
+    labels=c("", "d"),
     rel_heights = c(1.8, 1)
   )+theme(plot.background = element_rect(fill = "white", colour = "white"))
   cell = str_replace(cell, "/", ".")
@@ -569,11 +569,7 @@ make_advFig03("Central memory CD8 T cells",
 #               NK.DF,
 #               boxplot.NK)
 
-make_advFig03_NK("Natural killer cells", 
-              DEG_total,
-              NK,
-              NK.DF,
-              boxplot.NK)
+
 # adjust for NK part
 make_subcls_dimbardot_plot_NK <- function(cell, DEG_df, seurat_obj, DF){
   pos_DEG <- subset(DEG_df, cell_type==cell & UPDN=="UP")
@@ -621,7 +617,7 @@ make_advFig03_NK <- function(cell, DEG_df, seurat_obj, DF, boxplot_p){
     b,
     c,
     ncol=3, 
-    labels=c("A", "B", "C"),
+    labels=c("a", "b", "c"),
     rel_widths = c(1, 0.8, 1.2)
   )+theme(plot.background = element_rect(fill = "white", colour = "white"))
   
@@ -629,7 +625,7 @@ make_advFig03_NK <- function(cell, DEG_df, seurat_obj, DF, boxplot_p){
     pabc,
     d,
     ncol=1,
-    labels=c("", "D"),
+    labels=c("", "d"),
     rel_heights = c(1.8, 1)
   )+theme(plot.background = element_rect(fill = "white", colour = "white"))
   cell = str_replace(cell, "/", ".")
@@ -640,6 +636,10 @@ make_advFig03_NK <- function(cell, DEG_df, seurat_obj, DF, boxplot_p){
   ggsave(paste("ADV_Fig03_", cell, ".jpg", sep=""),
          plot=pabcd, width = 12, height = 12, dpi=600)
 }
-
+make_advFig03_NK("Natural killer cells", 
+                 DEG_total,
+                 NK,
+                 NK.DF,
+                 boxplot.NK)
 
 

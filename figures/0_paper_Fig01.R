@@ -503,14 +503,14 @@ Fig01_d <- plot_grid(
   rel_heights= c(0.25, 1, 1, 1, 0.4),
   align="v",
   axis="lr",
-  labels=c("D", "E", "F", "G", "H"),
+  labels=c("d", "e", "f", "g", "h"),
   ncol=1
 )
 
-ggsave("Fig01.pdf", plot = plot_grid(plot_grid(Fig01_a, Fig01_b, Fig01_c, ncol=1, labels=c("A", "B", "C")),
+ggsave("Fig01.pdf", plot = plot_grid(plot_grid(Fig01_a, Fig01_b, Fig01_c, ncol=1, labels=c("a", "b", "c")),
                                      Fig01_d, labels=c("", "")),
        width = 24, height = 18)
-ggsave("Fig01.png", plot = plot_grid(plot_grid(Fig01_a, Fig01_b, Fig01_c, ncol=1, labels=c("A", "B", "C"))+theme(plot.background = element_rect(fill = "white", colour = "white")),
+ggsave("Fig01.png", plot = plot_grid(plot_grid(Fig01_a, Fig01_b, Fig01_c, ncol=1, labels=c("a", "b", "c"))+theme(plot.background = element_rect(fill = "white", colour = "white")),
                                      Fig01_d, labels=c("", "")),
        width = 24, height = 18)
 

@@ -87,7 +87,7 @@ CCIN01F <- re_run_CCI(CCIN01F, "N01F", "Health")
 CCIYB <- re_run_CCI(CCIYB, "YB", "Health")
 CCIRG <- re_run_CCI(CCIRG, "RG", "Health")
 
-#pathways.show = "IL1"
+#pathways.show = "IL1" ----
 pdf("ADV_FigCCI_IL1_C1C4_TNF_C2C5C7YB.pdf", height = 20, width = 30)
 par(mfrow = c(2, 3), xpd=NA)
 
@@ -96,66 +96,135 @@ par(mfrow = c(2, 3), xpd=NA)
   netVisual_chord_cell(CCIc1, 
                     signaling = pathways.show,  
                     title.name ="",
-                    lab.cex=1.3
+                    lab.cex=1.5
 
                     
                     )
-  fig_label("A", cex=4, region="plot")
+  fig_label("a", cex=4, font=2, region="plot")
   fig_label("Case01-IL1", cex=4, region="plot", pos="bottom")
   netVisual_chord_cell(CCIc4, 
                     signaling = pathways.show,  
                     title.name ="",
-                    lab.cex=1.3
+                    lab.cex=1.5
 
                     
   )
-  fig_label("B", cex=4, region="plot")
+  fig_label("b", cex=4, font=2, region="plot")
   fig_label("Case04-IL1", cex=4, region="plot", pos="bottom")
   
   pathways.show = "TNF"
   netVisual_chord_cell(CCIc2, 
                        signaling = pathways.show,  
                        title.name ="",
-                       lab.cex=1.3
+                       lab.cex=1.5
                        
                        
   )
-  fig_label("C", cex=4, region="plot")
+  fig_label("c", cex=4, font=2, region="plot")
   fig_label("Case02-TNF", cex=4, region="plot", pos="bottom")
   
   netVisual_chord_cell(CCIc5, 
                        signaling = pathways.show,  
                        title.name ="",
-                       lab.cex=1.3
+                       lab.cex=1.5
                        
                        
   )
-  fig_label("D", cex=4, region="plot")
+  fig_label("d", cex=4, font=2, region="plot")
   fig_label("Case05-TNF", cex=4, region="plot", pos="bottom")
   
   netVisual_chord_cell(CCIc7, 
                        signaling = pathways.show,  
                        title.name ="",
-                       lab.cex=1.3
+                       lab.cex=1.5
                        
                        
   )
-  fig_label("E", cex=4, region="plot")
+  fig_label("e", cex=4, font=2, region="plot")
   fig_label("Case07-TNF", cex=4, region="plot", pos="bottom")
   
   netVisual_chord_cell(CCIYB, 
                        signaling = pathways.show,  
                        title.name ="",
-                       lab.cex=1.3
+                       lab.cex=1.5
                        
                        
   )
-  fig_label("F", cex=4, region="plot")
+  fig_label("f", cex=4, region="plot")
   fig_label("YB-TNF", cex=4, region="plot", pos="bottom")
   }
 dev.off()
+# # png ----
+# png("ADV_FigCCI_IL1_C1C4_TNF_C2C5C7YB.png", unit="in", res=300, height = 20, width = 30)
+# par(mfrow = c(2, 3), xpd=NA)
+# 
+# { # IL1
+#   pathways.show = "IL1"
+#   netVisual_chord_cell(CCIc1, 
+#                        signaling = pathways.show,  
+#                        title.name ="",
+#                        lab.cex=1.3
+#                        
+#                        
+#   )
+#   fig_label("a", cex=4, region="plot")
+#   fig_label("Case01-IL1", cex=4, region="plot", pos="bottom")
+#   netVisual_chord_cell(CCIc4, 
+#                        signaling = pathways.show,  
+#                        title.name ="",
+#                        lab.cex=1.3
+#                        
+#                        
+#   )
+#   fig_label("b", cex=4, region="plot")
+#   fig_label("Case04-IL1", cex=4, region="plot", pos="bottom")
+#   
+#   pathways.show = "TNF"
+#   netVisual_chord_cell(CCIc2, 
+#                        signaling = pathways.show,  
+#                        title.name ="",
+#                        lab.cex=1.3
+#                        
+#                        
+#   )
+#   fig_label("c", cex=4, region="plot")
+#   fig_label("Case02-TNF", cex=4, region="plot", pos="bottom")
+#   
+#   netVisual_chord_cell(CCIc5, 
+#                        signaling = pathways.show,  
+#                        title.name ="",
+#                        lab.cex=1.3
+#                        
+#                        
+#   )
+#   fig_label("d", cex=4, region="plot")
+#   fig_label("Case05-TNF", cex=4, region="plot", pos="bottom")
+#   
+#   netVisual_chord_cell(CCIc7, 
+#                        signaling = pathways.show,  
+#                        title.name ="",
+#                        lab.cex=1.3
+#                        
+#                        
+#   )
+#   fig_label("e", cex=4, region="plot")
+#   fig_label("Case07-TNF", cex=4, region="plot", pos="bottom")
+#   
+#   netVisual_chord_cell(CCIYB, 
+#                        signaling = pathways.show,  
+#                        title.name ="",
+#                        lab.cex=1.3
+#                        
+#                        
+#   )
+#   fig_label("f", cex=4, region="plot")
+#   fig_label("YB-TNF", cex=4, region="plot", pos="bottom")
+# }
+# dev.off()
 
-png("ADV_FigCCI_IL1_C1C4_TNF_C2C5C7YB.png", unit="in", res=300, height = 20, width = 30)
+# emf ----
+require(devEMF)
+emf("ADV_FigCCI_IL1_C1C4_TNF_C2C5C7YB.emf", height = 20, width = 30)
 par(mfrow = c(2, 3), xpd=NA)
 
 { # IL1
@@ -163,174 +232,174 @@ par(mfrow = c(2, 3), xpd=NA)
   netVisual_chord_cell(CCIc1, 
                        signaling = pathways.show,  
                        title.name ="",
-                       lab.cex=1.3
+                       lab.cex=1.5
                        
                        
   )
-  fig_label("A", cex=4, region="plot")
+  fig_label("a", cex=4, font=2,  region="plot")
   fig_label("Case01-IL1", cex=4, region="plot", pos="bottom")
   netVisual_chord_cell(CCIc4, 
                        signaling = pathways.show,  
                        title.name ="",
-                       lab.cex=1.3
+                       lab.cex=1.5
                        
                        
   )
-  fig_label("B", cex=4, region="plot")
+  fig_label("b", cex=4, font=2, region="plot")
   fig_label("Case04-IL1", cex=4, region="plot", pos="bottom")
   
   pathways.show = "TNF"
   netVisual_chord_cell(CCIc2, 
                        signaling = pathways.show,  
                        title.name ="",
-                       lab.cex=1.3
+                       lab.cex=1.5
                        
                        
   )
-  fig_label("C", cex=4, region="plot")
+  fig_label("c", cex=4, font=2, region="plot")
   fig_label("Case02-TNF", cex=4, region="plot", pos="bottom")
   
   netVisual_chord_cell(CCIc5, 
                        signaling = pathways.show,  
                        title.name ="",
-                       lab.cex=1.3
+                       lab.cex=1.5
                        
                        
   )
-  fig_label("D", cex=4, region="plot")
+  fig_label("d", cex=4, font=2, region="plot")
   fig_label("Case05-TNF", cex=4, region="plot", pos="bottom")
   
   netVisual_chord_cell(CCIc7, 
                        signaling = pathways.show,  
                        title.name ="",
-                       lab.cex=1.3
+                       lab.cex=1.5
                        
                        
   )
-  fig_label("E", cex=4, region="plot")
+  fig_label("e", cex=4, font=2, region="plot")
   fig_label("Case07-TNF", cex=4, region="plot", pos="bottom")
   
   netVisual_chord_cell(CCIYB, 
                        signaling = pathways.show,  
                        title.name ="",
-                       lab.cex=1.3
+                       lab.cex=1.5
                        
                        
   )
-  fig_label("F", cex=4, region="plot")
+  fig_label("f", cex=4, font=2, region="plot")
   fig_label("YB-TNF", cex=4, region="plot", pos="bottom")
 }
 dev.off()
 
-pdf("ADV_FigCCI_TGFB1_C1C2C4C5C7N01F.pdf", height = 20, width = 30)
-par(mfrow = c(2, 3), xpd=NA)
-
-{ 
-  pathways.show = "TGFb"
-  netVisual_chord_cell(CCIc1, 
-                       signaling = pathways.show,  
-                       title.name ="",
-                       lab.cex=1.3
-  )
-  fig_label("A", cex=4, region="plot")
-  fig_label("Case01-TGFb", cex=4, region="plot", pos="bottom")
-  
-  netVisual_chord_cell(CCIc2, 
-                       signaling = pathways.show,  
-                       title.name ="",
-                       lab.cex=1.3
-  )
-  fig_label("B", cex=4, region="plot")
-  fig_label("Case02-TGFb", cex=4, region="plot", pos="bottom")
-  
-  netVisual_chord_cell(CCIc4, 
-                       signaling = pathways.show,  
-                       title.name ="",
-                       lab.cex=1.3
-  )
-  fig_label("C", cex=4, region="plot")
-  fig_label("Case04-TGFb", cex=4, region="plot", pos="bottom")
-  
-  netVisual_chord_cell(CCIc5, 
-                       signaling = pathways.show,  
-                       title.name ="",
-                       lab.cex=1.3
-  )
-  fig_label("D", cex=4, region="plot")
-  fig_label("Case05-TGFb", cex=4, region="plot", pos="bottom")
-  
-  netVisual_chord_cell(CCIc7, 
-                       signaling = pathways.show,  
-                       title.name ="",
-                       lab.cex=1.3
-  )
-  fig_label("E", cex=4, region="plot")
-  fig_label("Case07-TGFb", cex=4, region="plot", pos="bottom")
-  
-  netVisual_chord_cell(CCIN01F, 
-                       signaling = pathways.show,  
-                       title.name ="",
-                       lab.cex=1.3
-  )
-  fig_label("F", cex=4, region="plot")
-  fig_label("N01F-TGFb", cex=4, region="plot", pos="bottom")
-}
-dev.off()
-
-png("ADV_FigCCI_TGFB1_C1C2C4C5C7N01F.png", unit="in", res=300, height = 20, width = 30)
-par(mfrow = c(2, 3), xpd=NA)
-
-{ 
-  pathways.show = "TGFb"
-  netVisual_chord_cell(CCIc1, 
-                       signaling = pathways.show,  
-                       title.name ="",
-                       lab.cex=1.3
-                       )
-  fig_label("A", cex=4, region="plot")
-  fig_label("Case01-TGFb", cex=4, region="plot", pos="bottom")
-  
-  netVisual_chord_cell(CCIc2, 
-                       signaling = pathways.show,  
-                       title.name ="",
-                       lab.cex=1.3
-                       )
-  fig_label("B", cex=4, region="plot")
-  fig_label("Case02-TGFb", cex=4, region="plot", pos="bottom")
-  
-  netVisual_chord_cell(CCIc4, 
-                       signaling = pathways.show,  
-                       title.name ="",
-                       lab.cex=1.3
-                       )
-  fig_label("C", cex=4, region="plot")
-  fig_label("Case04-TGFb", cex=4, region="plot", pos="bottom")
-  
-  netVisual_chord_cell(CCIc5, 
-                       signaling = pathways.show,  
-                       title.name ="",
-                       lab.cex=1.3
-                       )
-  fig_label("D", cex=4, region="plot")
-  fig_label("Case05-TGFb", cex=4, region="plot", pos="bottom")
-  
-  netVisual_chord_cell(CCIc7, 
-                       signaling = pathways.show,  
-                       title.name ="",
-                       lab.cex=1.3
-                       )
-  fig_label("E", cex=4, region="plot")
-  fig_label("Case07-TGFb", cex=4, region="plot", pos="bottom")
-  
-  netVisual_chord_cell(CCIN01F, 
-                       signaling = pathways.show,  
-                       title.name ="",
-                       lab.cex=1.3
-                       )
-  fig_label("F", cex=4, region="plot")
-  fig_label("N01F-TGFb", cex=4, region="plot", pos="bottom")
-}
-dev.off()
+# pdf("ADV_FigCCI_TGFB1_C1C2C4C5C7N01F.pdf", height = 20, width = 30)
+# par(mfrow = c(2, 3), xpd=NA)
+# 
+# { 
+#   pathways.show = "TGFb"
+#   netVisual_chord_cell(CCIc1, 
+#                        signaling = pathways.show,  
+#                        title.name ="",
+#                        lab.cex=1.3
+#   )
+#   fig_label("A", cex=4, region="plot")
+#   fig_label("Case01-TGFb", cex=4, region="plot", pos="bottom")
+#   
+#   netVisual_chord_cell(CCIc2, 
+#                        signaling = pathways.show,  
+#                        title.name ="",
+#                        lab.cex=1.3
+#   )
+#   fig_label("B", cex=4, region="plot")
+#   fig_label("Case02-TGFb", cex=4, region="plot", pos="bottom")
+#   
+#   netVisual_chord_cell(CCIc4, 
+#                        signaling = pathways.show,  
+#                        title.name ="",
+#                        lab.cex=1.3
+#   )
+#   fig_label("C", cex=4, region="plot")
+#   fig_label("Case04-TGFb", cex=4, region="plot", pos="bottom")
+#   
+#   netVisual_chord_cell(CCIc5, 
+#                        signaling = pathways.show,  
+#                        title.name ="",
+#                        lab.cex=1.3
+#   )
+#   fig_label("D", cex=4, region="plot")
+#   fig_label("Case05-TGFb", cex=4, region="plot", pos="bottom")
+#   
+#   netVisual_chord_cell(CCIc7, 
+#                        signaling = pathways.show,  
+#                        title.name ="",
+#                        lab.cex=1.3
+#   )
+#   fig_label("E", cex=4, region="plot")
+#   fig_label("Case07-TGFb", cex=4, region="plot", pos="bottom")
+#   
+#   netVisual_chord_cell(CCIN01F, 
+#                        signaling = pathways.show,  
+#                        title.name ="",
+#                        lab.cex=1.3
+#   )
+#   fig_label("F", cex=4, region="plot")
+#   fig_label("N01F-TGFb", cex=4, region="plot", pos="bottom")
+# }
+# dev.off()
+# 
+# png("ADV_FigCCI_TGFB1_C1C2C4C5C7N01F.png", unit="in", res=300, height = 20, width = 30)
+# par(mfrow = c(2, 3), xpd=NA)
+# 
+# { 
+#   pathways.show = "TGFb"
+#   netVisual_chord_cell(CCIc1, 
+#                        signaling = pathways.show,  
+#                        title.name ="",
+#                        lab.cex=1.3
+#                        )
+#   fig_label("A", cex=4, region="plot")
+#   fig_label("Case01-TGFb", cex=4, region="plot", pos="bottom")
+#   
+#   netVisual_chord_cell(CCIc2, 
+#                        signaling = pathways.show,  
+#                        title.name ="",
+#                        lab.cex=1.3
+#                        )
+#   fig_label("B", cex=4, region="plot")
+#   fig_label("Case02-TGFb", cex=4, region="plot", pos="bottom")
+#   
+#   netVisual_chord_cell(CCIc4, 
+#                        signaling = pathways.show,  
+#                        title.name ="",
+#                        lab.cex=1.3
+#                        )
+#   fig_label("C", cex=4, region="plot")
+#   fig_label("Case04-TGFb", cex=4, region="plot", pos="bottom")
+#   
+#   netVisual_chord_cell(CCIc5, 
+#                        signaling = pathways.show,  
+#                        title.name ="",
+#                        lab.cex=1.3
+#                        )
+#   fig_label("D", cex=4, region="plot")
+#   fig_label("Case05-TGFb", cex=4, region="plot", pos="bottom")
+#   
+#   netVisual_chord_cell(CCIc7, 
+#                        signaling = pathways.show,  
+#                        title.name ="",
+#                        lab.cex=1.3
+#                        )
+#   fig_label("E", cex=4, region="plot")
+#   fig_label("Case07-TGFb", cex=4, region="plot", pos="bottom")
+#   
+#   netVisual_chord_cell(CCIN01F, 
+#                        signaling = pathways.show,  
+#                        title.name ="",
+#                        lab.cex=1.3
+#                        )
+#   fig_label("F", cex=4, region="plot")
+#   fig_label("N01F-TGFb", cex=4, region="plot", pos="bottom")
+# }
+# dev.off()
 
 
 fig_label <- function(text, region="figure", pos="topleft", cex=NULL, ...) {
@@ -397,7 +466,7 @@ fig_label <- function(text, region="figure", pos="topleft", cex=NULL, ...) {
   return(invisible(c(x,y)))
 }
 
-
+# TGFb ----
 pdf("ADV_FigCCI_TGFB1_C1C2C4C5C7N01FRG.pdf", height = 20, width = 40)
 par(mfrow = c(2, 4), xpd=NA)
 
@@ -406,57 +475,121 @@ par(mfrow = c(2, 4), xpd=NA)
   netVisual_chord_cell(CCIc1, 
                        signaling = pathways.show,  
                        title.name ="",
-                       lab.cex=1.3
+                       lab.cex=1.5
   )
-  fig_label("A", cex=4, region="plot")
+  fig_label("a", cex=4, font=2, region="plot")
   fig_label("Case01-TGFb", cex=4, region="plot", pos="bottom")
   
   netVisual_chord_cell(CCIc2, 
                        signaling = pathways.show,  
                        title.name ="",
-                       lab.cex=1.3
+                       lab.cex=1.5
   )
-  fig_label("B", cex=4, region="plot")
+  fig_label("b", cex=4, font=2, region="plot")
   fig_label("Case02-TGFb", cex=4, region="plot", pos="bottom")
   
   netVisual_chord_cell(CCIc4, 
                        signaling = pathways.show,  
                        title.name ="",
-                       lab.cex=1.3
+                       lab.cex=1.5
   )
-  fig_label("C", cex=4, region="plot")
+  fig_label("c", cex=4, font=2, region="plot")
   fig_label("Case04-TGFb", cex=4, region="plot", pos="bottom")
   
   netVisual_chord_cell(CCIc5, 
                        signaling = pathways.show,  
                        title.name ="",
-                       lab.cex=1.3
+                       lab.cex=1.5
   )
-  fig_label("D", cex=4, region="plot")
+  fig_label("d", cex=4, font=2, region="plot")
   fig_label("Case05-TGFb", cex=4, region="plot", pos="bottom")
   
   netVisual_chord_cell(CCIc7, 
                        signaling = pathways.show,  
                        title.name ="",
-                       lab.cex=1.3
+                       lab.cex=1.5
   )
-  fig_label("E", cex=4, region="plot")
+  fig_label("e", cex=4, font=2, region="plot")
   fig_label("Case07-TGFb", cex=4, region="plot", pos="bottom")
   
   netVisual_chord_cell(CCIN01F, 
                        signaling = pathways.show,  
                        title.name ="",
-                       lab.cex=1.3
+                       lab.cex=1.5
   )
-  fig_label("F", cex=4, region="plot")
+  fig_label("f", cex=4, font=2, region="plot")
   fig_label("N01F-TGFb", cex=4, region="plot", pos="bottom")
   
   netVisual_chord_cell(CCIRG, 
                        signaling = pathways.show,  
                        title.name ="",
-                       lab.cex=1.3
+                       lab.cex=1.5 
   )
-  fig_label("G", cex=4, region="plot")
+  fig_label("g", cex=4, region="plot")
+  fig_label("RG-TGFb", cex=4, region="plot", pos="bottom")
+  
+}
+dev.off()
+# emf ----
+emf("ADV_FigCCI_TGFB1_C1C2C4C5C7N01FRG.emf", height = 20, width = 30)
+par(mfrow = c(2, 4), xpd=NA)
+
+{ 
+  pathways.show = "TGFb"
+  netVisual_chord_cell(CCIc1, 
+                       signaling = pathways.show,  
+                       title.name ="",
+                       lab.cex=1.5
+  )
+  fig_label("a", cex=4, font=2, region="plot")
+  fig_label("Case01-TGFb", cex=4, region="plot", pos="bottom")
+  
+  netVisual_chord_cell(CCIc2, 
+                       signaling = pathways.show,  
+                       title.name ="",
+                       lab.cex=1.5
+  )
+  fig_label("b", cex=4, font=2, region="plot")
+  fig_label("Case02-TGFb", cex=4, region="plot", pos="bottom")
+  
+  netVisual_chord_cell(CCIc4, 
+                       signaling = pathways.show,  
+                       title.name ="",
+                       lab.cex=1.5
+  )
+  fig_label("c", cex=4, font=2, region="plot")
+  fig_label("Case04-TGFb", cex=4, region="plot", pos="bottom")
+  
+  netVisual_chord_cell(CCIc5, 
+                       signaling = pathways.show,  
+                       title.name ="",
+                       lab.cex=1.5
+  )
+  fig_label("d", cex=4, font=2, region="plot")
+  fig_label("Case05-TGFb", cex=4, region="plot", pos="bottom")
+  
+  netVisual_chord_cell(CCIc7, 
+                       signaling = pathways.show,  
+                       title.name ="",
+                       lab.cex=1.5
+  )
+  fig_label("e", cex=4, font=2, region="plot")
+  fig_label("Case07-TGFb", cex=4, region="plot", pos="bottom")
+  
+  netVisual_chord_cell(CCIN01F, 
+                       signaling = pathways.show,  
+                       title.name ="",
+                       lab.cex=1.5
+  )
+  fig_label("f", cex=4, font=2, region="plot")
+  fig_label("N01F-TGFb", cex=4, region="plot", pos="bottom")
+  
+  netVisual_chord_cell(CCIRG, 
+                       signaling = pathways.show,  
+                       title.name ="",
+                       lab.cex=1.5
+  )
+  fig_label("g", cex=4, font=2, region="plot")
   fig_label("RG-TGFb", cex=4, region="plot", pos="bottom")
   
 }
